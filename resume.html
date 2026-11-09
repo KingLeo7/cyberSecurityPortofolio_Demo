@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rudra Prasad Rath — AI & Cybersecurity Engineer Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --color-black: #0F172A;
+      --color-dark: #1E293B;
+      --color-gray: #475569;
+      --color-light: #64748B;
+      --color-accent: #0284C7;
+      --color-line: #CBD5E1;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #F8FAFC;
+      color: var(--color-dark);
+      font-family: var(--font-main);
+      font-size: 8.5pt;
+      line-height: 1.28;
+      -webkit-font-smoothing: antialiased;
+      padding: 1rem 0.5rem;
+    }
+
+    .resume-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #FFFFFF;
+      padding: 1.25rem 1.75rem;
+      border-radius: 4px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    /* Header */
+    .resume-header {
+      border-bottom: 1.5px solid var(--color-black);
+      padding-bottom: 0.35rem;
+      margin-bottom: 0.4rem;
+      text-align: center;
+    }
+
+    .candidate-name {
+      font-size: 15.5pt;
+      font-weight: 700;
+      color: var(--color-black);
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .candidate-title {
+      font-size: 9pt;
+      font-weight: 600;
+      color: var(--color-accent);
+      margin-top: 0.1rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .contact-line {
+      margin-top: 0.2rem;
+      font-size: 8pt;
+      color: var(--color-gray);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .contact-line a {
+      color: var(--color-dark);
+      text-decoration: none;
+    }
+
+    .contact-line a:hover {
+      text-decoration: underline;
+      color: var(--color-accent);
+    }
+
+    /* Section Styles */
+    .section-title {
+      font-size: 9pt;
+      font-weight: 700;
+      color: var(--color-black);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid var(--color-line);
+      padding-bottom: 0.05rem;
+      margin-top: 0.4rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .section-p {
+      font-size: 8.25pt;
+      color: var(--color-dark);
+      text-align: justify;
+      line-height: 1.25;
+    }
+
+    /* Skills Grid */
+    .skills-block {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .skill-row {
+      font-size: 8.25pt;
+      line-height: 1.24;
+    }
+
+    .skill-label {
+      font-weight: 700;
+      color: var(--color-black);
+    }
+
+    /* Experience & Projects */
+    .item-block {
+      margin-bottom: 0.35rem;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.05rem;
+    }
+
+    .item-title-left {
+      font-size: 8.75pt;
+      font-weight: 700;
+      color: var(--color-black);
+    }
+
+    .item-company {
+      font-weight: 600;
+      color: var(--color-accent);
+    }
+
+    .item-meta-right {
+      font-size: 7.75pt;
+      color: var(--color-light);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .item-sub {
+      font-size: 7.75pt;
+      font-style: italic;
+      color: var(--color-gray);
+      margin-bottom: 0.1rem;
+    }
+
+    .bullet-list {
+      list-style-type: disc;
+      padding-left: 1rem;
+      margin-top: 0.05rem;
+    }
+
+    .bullet-list li {
+      font-size: 8pt;
+      color: var(--color-dark);
+      margin-bottom: 0.08rem;
+      line-height: 1.25;
+    }
+
+    .bullet-list li strong {
+      color: var(--color-black);
+    }
+
+    .no-print {
+      display: flex;
+    }
+
+    /* Print Formatting */
+    @media print {
+      body {
+        background: #FFFFFF;
+        padding: 0;
+        margin: 0;
+        font-size: 8.25pt;
+      }
+
+      .resume-container {
+        max-width: 100%;
+        padding: 0.15in 0.25in;
+        box-shadow: none;
+        border-radius: 0;
+      }
+
+      .no-print {
+        display: none !important;
+      }
+
+      @page {
+        margin: 0.15in 0.2in;
+        size: letter portrait;
+      }
+    }
+
+    .print-bar {
+      max-width: 800px;
+      margin: 0 auto 0.5rem auto;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .btn-print {
+      background: #0284C7;
+      color: #FFFFFF;
+      border: none;
+      padding: 0.35rem 0.85rem;
+      border-radius: 4px;
+      font-family: var(--font-main);
+      font-weight: 600;
+      font-size: 8pt;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="print-bar no-print">
+    <a href="index.html" style="color: #0284C7; text-decoration: none; font-weight: 600; font-size: 8.5pt;">← Return to Command Center</a>
+    <button class="btn-print" onclick="window.print()">Print / Save as PDF</button>
+  </div>
+
+  <main class="resume-container">
+
+    <!-- ================= HEADER ================= -->
+    <header class="resume-header">
+      <h1 class="candidate-name">Rudra Prasad Rath</h1>
+      <p class="candidate-title">Cybersecurity & AI Security Engineer</p>
+      <div class="contact-line">
+        <span>Berhampur, Odisha, India</span>
+        <span>•</span>
+        <span>+91 70772 13018</span>
+        <span>•</span>
+        <a href="mailto:rudrarath44@gmail.com">rudrarath44@gmail.com</a>
+        <span>•</span>
+        <a href="https://linkedin.com/in/rudra-prasad-rath-ba8b10209" target="_blank">linkedin.com/in/rudra-prasad-rath</a>
+        <span>•</span>
+        <a href="https://github.com/KingLeo7" target="_blank">github.com/KingLeo7</a>
+      </div>
+    </header>
+
+    <!-- ================= PROFESSIONAL SUMMARY ================= -->
+    <section>
+      <h2 class="section-title">Professional Summary</h2>
+      <p class="section-p">
+        <strong>Cybersecurity & AI Security Engineer</strong> with practical experience in defensive software architecture, automated intrusion detection, and adversarial vulnerability assessment. Experienced in engineering custom Intrusion Detection and Prevention Systems (IDPS) in Python/Flask, conducting web and network penetration testing using Kali Linux, Burp Suite, and Wireshark, and researching LLM threat mitigation (OWASP Top 10 for LLMs, prompt injection defense). Adept at bridging AI/ML foundations with cybersecurity engineering to automate threat mitigation and enforce security-by-design principles across web, API, and intelligent systems.
+      </p>
+    </section>
+
+    <!-- ================= TECHNICAL SKILLS ================= -->
+    <section>
+      <h2 class="section-title">Core Technical Skills</h2>
+      <div class="skills-block">
+        <div class="skill-row">
+          <span class="skill-label">AI & GenAI Security:</span>
+          Adversarial Machine Learning, OWASP Top 10 for LLMs, Prompt Injection & Jailbreak Defense, MITRE ATLAS Threat Modeling, NIST AI RMF, RAG Security Guardrails, Model Input Validation.
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Cybersecurity & Pen-Testing:</span>
+          Intrusion Detection & Prevention (IDS/IPS), Web App Security (OWASP Top 10: SQLi, XSS, CSRF), Network Packet Analysis (Wireshark PCAP), Port Scanning & Reconnaissance (Nmap), Metasploit, Burp Suite.
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Programming & Automation:</span>
+          Python (Advanced Security Tooling, Regex Engines), Java, C, SQL, Bash Scripting, REST API Hardening, JSON Data Normalization, Git/GitHub.
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Libraries, Databases & OS:</span>
+          Flask, NumPy, Pandas, Scikit-Learn [NEEDS INPUT], SQLite, MySQL, Linux (Debian/Ubuntu Hardening).
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Frameworks & Standards:</span>
+          MITRE ATT&CK, MITRE ATLAS, NIST Cybersecurity Framework (CSF), Defense-in-Depth, Zero Trust Principles.
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROFESSIONAL EXPERIENCE ================= -->
+    <section>
+      <h2 class="section-title">Professional Experience</h2>
+      
+      <div class="item-block">
+        <div class="item-header">
+          <span class="item-title-left">Cybersecurity Intern <span class="item-company">| UNLOX (Remote)</span></span>
+          <span class="item-meta-right">Apr 2026 – May 2026</span>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>Engineered automated vulnerability scanning workflows</strong> across Linux and TCP/IP networks using Nmap and Wireshark, identifying open attack vectors and misconfigurations.</li>
+          <li><strong>Conducted systematic web application security testing</strong> with Burp Suite and Kali Linux, analyzing OWASP Top 10 vectors including input sanitization defects and auth bypasses.</li>
+          <li><strong>Formulated comprehensive technical remediation reports</strong> mapping exploit pathways to CVSS-aligned risk severity ratings, delivering actionable hardening steps.</li>
+          <li><strong>Simulated adversarial attack exercises</strong> in controlled laboratory environments to validate the resilience of defensive firewall controls and intrusion detection rules.</li>
+          <li>Identified and documented <strong>[NEEDS INPUT: e.g., 20+]</strong> security vulnerabilities, accelerating remediation turnaround time for staging deployments.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= TECHNICAL PROJECTS ================= -->
+    <section>
+      <h2 class="section-title">Selected AI & Cybersecurity Projects</h2>
+
+      <div class="item-block">
+        <div class="item-header">
+          <span class="item-title-left">Web-Based Intrusion Detection & Prevention System (IDPS)</span>
+          <span class="item-meta-right">Python, Flask, SQLite, Regex | 2026</span>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>Architected an automated web defense engine</strong> that intercepts, logs, and mitigates SQL injection, Cross-Site Scripting (XSS), and brute-force authentication attacks in real time.</li>
+          <li><strong>Implemented stateful IP-based rate limiting</strong> (60 req/min thresholds) and automated temporary IP null-routing, dropping malicious traffic before backend query execution.</li>
+          <li><strong>Built an administrative telemetry dashboard</strong> streaming real-time security events, sanitizing user inputs, and maintaining persistent audit logs for SOC monitoring.</li>
+        </ul>
+      </div>
+
+      <div class="item-block">
+        <div class="item-header">
+          <span class="item-title-left">OSINT Telephony Intelligence & Geolocation Engine</span>
+          <span class="item-meta-right">Python, REST APIs, JSON, Geocoding | 2026</span>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>Engineered a 10-module Python threat intelligence tool</strong> designed to automate Open-Source Intelligence (OSINT) reconnaissance on global telephony indicators.</li>
+          <li><strong>Integrated third-party geocoding and telecom routing REST APIs</strong> to parse line validation, carrier identity, timezone metadata, and approximate coordinates.</li>
+          <li><strong>Developed an automated visual rendering pipeline</strong> translating normalized JSON telemetry into interactive Leaflet HTML maps for rapid SOC analyst triage.</li>
+        </ul>
+      </div>
+
+      <div class="item-block">
+        <div class="item-header">
+          <span class="item-title-left">Adversary Emulation & Penetration Testing Labs</span>
+          <span class="item-meta-right">Kali Linux, Metasploit, Nmap, Wireshark | Ongoing</span>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>Executed structured offensive security simulations</strong> on Hack The Box lab environments targeting vulnerable Linux/Windows machines.</li>
+          <li><strong>Conducted end-to-end exploit lifecycles</strong>: service enumeration via Nmap, exploit delivery with Metasploit, binary privilege escalation, and lateral movement analysis.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= EDUCATION ================= -->
+    <section>
+      <h2 class="section-title">Education</h2>
+      <div class="item-block">
+        <div class="item-header">
+          <span class="item-title-left">B.Tech in Computer Science & Engineering (AI/ML)</span>
+          <span class="item-meta-right">2024 – 2028</span>
+        </div>
+        <div class="item-sub">NIST University, Berhampur, Odisha • CGPA: 7.3 / 10.0</div>
+        <p class="section-p" style="font-size: 7.75pt; color: var(--color-gray);">
+          Relevant Coursework: Machine Learning, Artificial Intelligence, Cybersecurity, Data Structures & Algorithms, Network Security, Database Management Systems.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= CERTIFICATIONS & CREDENTIALS ================= -->
+    <section>
+      <h2 class="section-title">Certifications & Credentials</h2>
+      <div class="skills-block">
+        <div class="skill-row">
+          <span class="skill-label">Introduction to Cybersecurity</span> — Cisco Networking Academy (Jun 2026) | Threat Analysis, Network Defense, Cyber Administration.
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Hands-on Cybersecurity Labs</span> — Hack The Box (2026) | Network Enumeration, Metasploit Exploitation, Packet Analysis.
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= LANGUAGES ================= -->
+    <section>
+      <h2 class="section-title">Languages</h2>
+      <p class="section-p" style="font-size: 7.75pt;">
+        English (Professional Working Proficiency), Hindi (Fluent), Odia (Native).
+      </p>
+    </section>
+
+  </main>
+
+</body>
+</html>

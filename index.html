@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rudra Prasad Rath — AI & Cybersecurity Command Center</title>
+  <meta name="description" content="Rudra Prasad Rath — AI Security & Cybersecurity Engineer. Single-view command center for threat defense, IDPS engineering, and AI security research.">
+  <meta name="author" content="Rudra Prasad Rath">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rudra Prasad Rath — AI & Cybersecurity Command Center">
+  <meta property="og:description" content="AI Security & Cybersecurity Engineer. Interactive, zero-scroll command center.">
+
+  <!-- Fonts: JetBrains Mono + Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+
+  <!-- ================= TOP COMMAND HUD ================= -->
+  <header class="hud-header">
+    <div class="hud-left">
+      <div class="hud-brand">
+        <span class="hud-prompt">&gt;</span>
+        <span class="hud-name">RUDRA_RATH</span>
+        <span class="hud-role">// AI + CYBERSECURITY ENGINEER</span>
+      </div>
+    </div>
+
+    <div class="hud-center">
+      <div class="telemetry-pill">
+        <span class="pulse-dot"></span>
+        <span class="ticker-text" id="hudTicker">IDPS ACTIVE • THREATS BLOCKED: 18 • STATUS: SECURE</span>
+      </div>
+    </div>
+
+    <div class="hud-right">
+      <span class="hud-stat">SYS_LATENCY: <strong>14ms</strong></span>
+      <span class="hud-stat">KEYBOARD: <strong>[1-6]</strong></span>
+      <a href="resume.html" class="hud-btn" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <span>View / Print Resume</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ================= MAIN DASHBOARD WORKSPACE ================= -->
+  <div class="dashboard-layout">
+
+    <!-- ================= LEFT NAVIGATION DOCK ================= -->
+    <nav class="dock-sidebar" aria-label="Command Center Navigation">
+      <div class="dock-menu">
+        <button class="dock-btn active" data-tab="overview" id="tab-overview" aria-controls="panel-overview" aria-selected="true" role="tab">
+          <span class="dock-key">1</span>
+          <div class="dock-info">
+            <span class="dock-label">Overview</span>
+            <span class="dock-sub">Profile & Telemetry</span>
+          </div>
+        </button>
+
+        <button class="dock-btn" data-tab="ai-lab" id="tab-ai-lab" aria-controls="panel-ai-lab" aria-selected="false" role="tab">
+          <span class="dock-key">2</span>
+          <div class="dock-info">
+            <span class="dock-label">AI Security Lab</span>
+            <span class="dock-sub">LLM & Model Defense</span>
+          </div>
+        </button>
+
+        <button class="dock-btn" data-tab="cases" id="tab-cases" aria-controls="panel-cases" aria-selected="false" role="tab">
+          <span class="dock-key">3</span>
+          <div class="dock-info">
+            <span class="dock-label">Case Studies</span>
+            <span class="dock-sub">IDPS, OSINT & Labs</span>
+          </div>
+        </button>
+
+        <button class="dock-btn" data-tab="skills" id="tab-skills" aria-controls="panel-skills" aria-selected="false" role="tab">
+          <span class="dock-key">4</span>
+          <div class="dock-info">
+            <span class="dock-label">Competencies</span>
+            <span class="dock-sub">Skills & Frameworks</span>
+          </div>
+        </button>
+
+        <button class="dock-btn" data-tab="experience" id="tab-experience" aria-controls="panel-experience" aria-selected="false" role="tab">
+          <span class="dock-key">5</span>
+          <div class="dock-info">
+            <span class="dock-label">Work & Education</span>
+            <span class="dock-sub">UNLOX, NIST, Cisco</span>
+          </div>
+        </button>
+
+        <button class="dock-btn" data-tab="terminal" id="tab-terminal" aria-controls="panel-terminal" aria-selected="false" role="tab">
+          <span class="dock-key">6</span>
+          <div class="dock-info">
+            <span class="dock-label">Terminal / Contact</span>
+            <span class="dock-sub">Interactive Console</span>
+          </div>
+        </button>
+      </div>
+
+      <!-- Quick Signals in Dock Footer -->
+      <div class="dock-footer">
+        <div class="quick-signal">
+          <span class="signal-tag">DEGREE</span>
+          <span class="signal-val">B.Tech AI/ML '28</span>
+        </div>
+        <div class="quick-signal">
+          <span class="signal-tag">LOCATION</span>
+          <span class="signal-val">Odisha, India</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================= VIEWPORT PANEL CONTAINER ================= -->
+    <main class="viewport-workspace">
+
+      <!-- ================= PANEL 1: OVERVIEW ================= -->
+      <section class="panel-view active" id="panel-overview" role="tabpanel" aria-labelledby="tab-overview">
+        <div class="panel-grid-2">
+          
+          <div class="panel-card main-intro">
+            <div class="card-badge">DEFENSE ARCHITECTURE // ACTIVE PROFILE</div>
+            <h1 class="panel-hero-title">
+              Rudra Prasad <span class="text-cyan">Rath</span>
+            </h1>
+            <p class="panel-hero-sub">AI + Cybersecurity Engineer</p>
+
+            <p class="panel-desc">
+              Bridging <strong>Artificial Intelligence</strong> and <strong>Cybersecurity Engineering</strong>. Specializing in defensive software architecture, automated intrusion prevention (IDPS), web vulnerability analysis, and LLM adversarial threat modeling.
+            </p>
+
+            <div class="highlight-pills">
+              <span class="pill">Intrusion Detection (IDPS)</span>
+              <span class="pill">OWASP Top 10 for LLMs</span>
+              <span class="pill">Burp Suite & Kali Linux</span>
+              <span class="pill">Python Security Automation</span>
+              <span class="pill">MITRE ATT&CK & ATLAS</span>
+            </div>
+
+            <div class="quick-stats-row">
+              <div class="stat-box">
+                <span class="s-val">AI/ML</span>
+                <span class="s-lbl">Formal Degree Focus</span>
+              </div>
+              <div class="stat-box">
+                <span class="s-val">Defensive</span>
+                <span class="s-lbl">IDPS & OSINT Builder</span>
+              </div>
+              <div class="stat-box">
+                <span class="s-val">Hands-on</span>
+                <span class="s-lbl">Hack The Box Labs</span>
+              </div>
+            </div>
+
+            <div class="panel-actions">
+              <button class="btn btn-primary" onclick="switchTab('cases')">View Case Studies (Key 3)</button>
+              <button class="btn btn-secondary" onclick="switchTab('terminal')">Launch Contact Console (Key 6)</button>
+            </div>
+          </div>
+
+          <!-- Live Console Side Panel -->
+          <div class="panel-card console-card">
+            <div class="console-topbar">
+              <span class="c-title">IDPS_INTERCEPTOR_STREAM.log</span>
+              <span class="c-tag">REALTIME</span>
+            </div>
+            <div class="console-stream" id="overviewStream">
+              <!-- Populated by JS -->
+            </div>
+            <div class="console-summary-bar">
+              <span class="sum-item text-green">✓ Parameterized Queries Enforced</span>
+              <span class="sum-item text-cyan">⚡ 0ms Latency Overhead</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= PANEL 2: AI SECURITY LAB ================= -->
+      <section class="panel-view" id="panel-ai-lab" role="tabpanel" aria-labelledby="tab-ai-lab">
+        <div class="panel-head">
+          <h2 class="panel-title">AI Security Lab & Threat Defense</h2>
+          <p class="panel-subtitle">Architectural analysis and mitigation for Foundation Models, LLMs, and RAG architectures.</p>
+        </div>
+
+        <div class="lab-cards-grid">
+          
+          <div class="panel-card lab-item">
+            <div class="lab-header">
+              <span class="lab-tag">THREAT VECTOR 01</span>
+              <h3>Direct & Indirect Prompt Injection</h3>
+            </div>
+            <p class="lab-desc">Adversarial attempts to bypass system constraints or trigger unauthorized API execution via poisoned retrieved context.</p>
+            <div class="defense-box">
+              <span class="def-title">Defensive Strategy:</span>
+              <p>Strict token delimiter isolation, deterministic JSON schema parsing, and secondary LLM guardrail verification prior to execution.</p>
+            </div>
+          </div>
+
+          <div class="panel-card lab-item">
+            <div class="lab-header">
+              <span class="lab-tag">THREAT VECTOR 02</span>
+              <h3>RAG Pipeline Poisoning & Exfiltration</h3>
+            </div>
+            <p class="lab-desc">Injecting adversarial payloads into knowledge bases to force context leakage or unauthorized data retrieval.</p>
+            <div class="defense-box">
+              <span class="def-title">Defensive Strategy:</span>
+              <p>Embedding cosine anomaly checks, strict document chunk-level RBAC tokens, and dynamic regex redaction on model responses.</p>
+            </div>
+          </div>
+
+          <div class="panel-card lab-item">
+            <div class="lab-header">
+              <span class="lab-tag">THREAT VECTOR 03</span>
+              <h3>Adversarial ML & Evasion Attacks</h3>
+            </div>
+            <p class="lab-desc">Perturbation techniques crafted to evade spam, malware, and intrusion classification models.</p>
+            <div class="defense-box">
+              <span class="def-title">Defensive Strategy:</span>
+              <p>Adversarial training cycles, feature-space bounds regularization, and multi-model ensemble consensus voting.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= PANEL 3: CASE STUDIES ================= -->
+      <section class="panel-view" id="panel-cases" role="tabpanel" aria-labelledby="tab-cases">
+        <div class="cases-layout">
+          
+          <!-- Sub-Selector List -->
+          <div class="cases-selector">
+            <button class="case-nav-btn active" onclick="showCase(0)">
+              <span class="c-num">01</span>
+              <div>
+                <strong>Web-Based IDPS</strong>
+                <small>Python / Flask / Regex</small>
+              </div>
+            </button>
+            <button class="case-nav-btn" onclick="showCase(1)">
+              <span class="c-num">02</span>
+              <div>
+                <strong>OSINT Geolocation Engine</strong>
+                <small>Python / REST / Telephony</small>
+              </div>
+            </button>
+            <button class="case-nav-btn" onclick="showCase(2)">
+              <span class="c-num">03</span>
+              <div>
+                <strong>Hack The Box Lab Suite</strong>
+                <small>Metasploit / Linux / Pen-testing</small>
+              </div>
+            </button>
+          </div>
+
+          <!-- Dynamic Case Detail View -->
+          <div class="case-display panel-card" id="caseDetail">
+            <!-- Rendered by JS -->
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= PANEL 4: COMPETENCIES ================= -->
+      <section class="panel-view" id="panel-skills" role="tabpanel" aria-labelledby="tab-skills">
+        <div class="panel-head">
+          <h2 class="panel-title">Core Competency Matrix</h2>
+          <p class="panel-subtitle">Structured technical skills and industry framework alignments.</p>
+        </div>
+
+        <div class="skills-grid-4">
+          
+          <div class="panel-card skill-box">
+            <span class="skill-cat">AI & GenAI Security</span>
+            <ul class="skill-list">
+              <li>OWASP Top 10 for LLMs</li>
+              <li>Prompt Injection Defense</li>
+              <li>MITRE ATLAS Threat Modeling</li>
+              <li>NIST AI RMF</li>
+              <li>Model Input Sanitization</li>
+              <li>NumPy & Pandas Analytics</li>
+            </ul>
+          </div>
+
+          <div class="panel-card skill-box">
+            <span class="skill-cat">Offensive & Pen-Testing</span>
+            <ul class="skill-list">
+              <li>Kali Linux Tools</li>
+              <li>Burp Suite Community/Pro</li>
+              <li>Nmap Port & Script Scanning</li>
+              <li>Wireshark Packet Analysis</li>
+              <li>Metasploit Framework</li>
+              <li>OWASP Web Top 10 (SQLi, XSS)</li>
+            </ul>
+          </div>
+
+          <div class="panel-card skill-box">
+            <span class="skill-cat">Defensive & Automation</span>
+            <ul class="skill-list">
+              <li>Intrusion Detection (IDPS)</li>
+              <li>Python Security Scripting</li>
+              <li>Flask Middleware Design</li>
+              <li>IP Rate Limiting & Blocking</li>
+              <li>REST API Hardening</li>
+              <li>Bash & Linux Hardening</li>
+            </ul>
+          </div>
+
+          <div class="panel-card skill-box">
+            <span class="skill-cat">Frameworks & Standards</span>
+            <ul class="skill-list">
+              <li>MITRE ATT&CK Framework</li>
+              <li>Defense-in-Depth</li>
+              <li>Zero Trust Architecture</li>
+              <li>NIST Cybersecurity Framework</li>
+              <li>SQL Parameterization</li>
+              <li>Git & Version Control</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= PANEL 5: EXPERIENCE & EDUCATION ================= -->
+      <section class="panel-view" id="panel-experience" role="tabpanel" aria-labelledby="tab-experience">
+        <div class="panel-grid-2">
+          
+          <div class="panel-card">
+            <div class="card-badge">PROFESSIONAL EXPERIENCE</div>
+            <div class="exp-block">
+              <div class="exp-head">
+                <div>
+                  <h3 class="exp-role">Cybersecurity Intern</h3>
+                  <span class="exp-org text-cyan">UNLOX (Remote)</span>
+                </div>
+                <span class="exp-date">Apr – May 2026</span>
+              </div>
+              <ul class="exp-bullets">
+                <li>Automated vulnerability scanning routines with Nmap & Wireshark to isolate network misconfigurations.</li>
+                <li>Conducted web penetration assessments utilizing Burp Suite, identifying OWASP Top 10 vectors.</li>
+                <li>Authored technical remediation reports for engineering leads detailing CVSS exploit pathways.</li>
+                <li>Executed adversarial attack simulations in controlled environments to validate defensive controls.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="panel-card">
+            <div class="card-badge">EDUCATION & CREDENTIALS</div>
+            
+            <div class="edu-block">
+              <h4 class="edu-degree">B.Tech in Computer Science (AI/ML)</h4>
+              <p class="edu-uni">NIST University, Berhampur • 2024–2028</p>
+              <p class="edu-note">CGPA: 7.3/10 • Machine Learning, Artificial Intelligence, Network Security, DBMS.</p>
+            </div>
+
+            <div class="edu-block">
+              <h4 class="edu-degree">Introduction to Cybersecurity</h4>
+              <p class="edu-uni">Cisco Networking Academy • Jun 2026</p>
+              <p class="edu-note">Threat analysis, network defense, system safeguards, and cyber administration.</p>
+            </div>
+
+            <div class="edu-block">
+              <h4 class="edu-degree">Hands-on Security Labs</h4>
+              <p class="edu-uni">Hack The Box • 2026</p>
+              <p class="edu-note">Active enumeration, Metasploit exploitation, and protocol forensics.</p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= PANEL 6: TERMINAL / CONTACT ================= -->
+      <section class="panel-view" id="panel-terminal" role="tabpanel" aria-labelledby="tab-terminal">
+        <div class="terminal-container panel-card">
+          <div class="terminal-top">
+            <div class="c-btns">
+              <span class="dot d-r"></span>
+              <span class="dot d-y"></span>
+              <span class="dot d-g"></span>
+            </div>
+            <span class="term-title">sec_contact_terminal@rudra-security:~</span>
+          </div>
+
+          <div class="terminal-body" id="termOutput">
+            <p class="term-line text-cyan">// COMMAND CENTER CONTACT & RECRUITER PORTAL</p>
+            <p class="term-line">Available commands: <span class="text-white">help, email, linkedin, github, resume, clear</span></p>
+            <p class="term-line text-muted">----------------------------------------------------</p>
+            <p class="term-line">Email: <a href="mailto:rudrarath44@gmail.com" class="text-green">rudrarath44@gmail.com</a></p>
+            <p class="term-line">Phone: <span class="text-white">+91 70772 13018</span></p>
+            <p class="term-line">LinkedIn: <a href="https://linkedin.com/in/rudra-prasad-rath-ba8b10209" target="_blank" rel="noopener" class="text-cyan">linkedin.com/in/rudra-prasad-rath-ba8b10209</a></p>
+            <p class="term-line">GitHub: <a href="https://github.com/KingLeo7" target="_blank" rel="noopener" class="text-cyan">github.com/KingLeo7</a></p>
+            <p class="term-line">Location: <span class="text-white">Berhampur, Odisha, India</span></p>
+          </div>
+
+          <div class="terminal-input-row">
+            <span class="term-prompt">guest@rudra:~$</span>
+            <input type="text" id="termInput" class="term-field" placeholder="Type a command (e.g. 'resume', 'email', 'help')..." autocomplete="off" spellcheck="false">
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
